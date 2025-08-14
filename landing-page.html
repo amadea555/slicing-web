@@ -7,33 +7,39 @@
 
     <style>
       * {
-        margin: 0;
         padding: 0;
-        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden; /* cegah scroll horizontal */
+        margin: 7px 10px;
       }
       @font-face {
-        font-family: "rubik-regular";
+        font-family: "rubik";
         src: url(rubik-font-woff/Rubik-Regular.woff) format("woff");
         font-style: normal;
+        font-weight: 400;
       }
       @font-face {
-        font-family: "rubik-medium";
+        font-family: "rubik";
         src: url(rubik-font-woff/Rubik-Medium.woff) format("woff");
         font-style: normal;
+        font-weight: 500;
       }
       @font-face {
-        font-family: "rubik-bold";
+        font-family: "rubik";
         src: url(rubik-font-woff/Rubik-Bold.woff) format("woff");
         font-style: normal;
+        font-weight: 700;
       }
       @font-face {
-        font-family: "rubik-light";
+        font-family: "rubik";
         src: url(rubik-font-woff/Rubik-Light.woff) format("woff");
         font-style: normal;
+        font-weight: 300;
       }
       .section-one {
         display: inline-block;
-        width: 100%;
+        width: 100vw;
         height: auto;
       }
       .navbar-div {
@@ -41,7 +47,7 @@
         justify-content: space-around;
         align-items: center;
         width: 100%;
-        height: 100px;
+        height: auto;
       }
       .navbar-left,
       .navbar-center,
@@ -53,6 +59,7 @@
       }
       .navbar-logo {
         display: flex;
+        margin-left: 15px;
         align-items: center;
       }
       .navbar-logo .logo-image {
@@ -71,62 +78,147 @@
       .navbar-menu ul li a {
         text-decoration: none;
         color: black;
-        font-family: "rubik-regular", serif;
+        font-family: "rubik", serif;
         font-size: 17.6px;
         transition: color 0.3s;
       }
       .navbar-menu ul li a:hover {
-        color: rgb(241, 65, 38);
+        color: #f53838;
       }
       .navbar-button {
         text-align: center;
         display: flex;
         align-items: center;
-        margin: -1.75px;
       }
       .navbar-button .button-signin {
         background-color: transparent;
         border: none;
         border-radius: 50px;
         color: #f53838;
-        font-family: "rubik-regular";
-        font-size: 18px;
+        font-family: "rubik";
+        font-size: 17.6px;
         padding: 8px 32px;
         transform: scale(1);
-        transition: all .3s cubic-bezier(1,0,0,1);
+        transition: all 0.3s cubic-bezier(1, 0, 0, 1);
       }
       .navbar-button .button-signin:hover {
-        background-color: #f53838 ;
+        background-color: #f53838;
         color: #fff;
-        transform:scale(1.03) translateY(-.2rem);
-        box-shadow: 2px 2px 2px 1px rgba(245,56,56,.3);
+        transform: scale(1.03) translateY(-0.2rem);
+        box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
       }
-     .navbar-button .button-signup {
+      .navbar-button .button-signup {
         background-color: transparent;
         border: 1px solid #f53838;
         border-radius: 50px;
         color: #f53838;
-        font-family: "rubik-regular";
-        font-size: 18px;
+        font-family: "rubik";
+        font-size: 17.6px;
         padding: 8px 32px;
         transform: scale(1);
-        transition: all .3s cubic-bezier(1,0,0,1);
+        transition: all 0.3s cubic-bezier(1, 0, 0, 1);
       }
       .navbar-button .button-signup:hover {
-        background-color: #f53838 ;
+        background-color: #f53838;
         color: #fff;
-        transform:scale(1.03) translateY(-.2rem);
-        box-shadow: 2px 2px 2px 1px rgba(245,56,56,.3);
+        transform: scale(1.03) translateY(-0.2rem);
+        box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
       }
       .content-center-div {
-        width: 100%;
-        height: 500px;
-        background-color: blueviolet;
+        height: auto;
+        display: flex;
+      }
+      .content-center-div .center-text-title {
+        margin-top: 150px;
+        margin-left: 100px;
+        text-align: start;
+        font-family: "rubik";
+        font-weight: 500;
+        font-size: 48px;
+      }
+      .content-center-div .center-text-content {
+        margin-top: 30px;
+        max-width: 3;
+        font-family: "rubik";
+        text-align: start;
+        font-weight: 400;
+        font-size: 17.6px;
+        line-height: 30px;
+      }
+      .button-get-started {
+        margin-top: 40px;
+        background-color: #f53838;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-family: "rubik";
+        font-size: 18px;
+        padding: 17px 80px;
+        transform: scale(1);
+        transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+      }
+
+      .button-get-started:hover {
+        background-color: #f53838;
+        transform: scale(1.03) translateY(-0.2rem);
+        box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
+      }
+
+      .content-center-div .center-image {
+        margin: 25px 90px 0;
+        width: 43vw;
+        height: fit-content;
       }
       .content-bottom-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        height: 200px;
-        background-color: palevioletred;
+        max-width: 1100px;
+        background: none;
+        box-shadow: 1px 1px 1px 1px #eee, -1px -1px 1px 1px #eee;
+        margin: 158px auto;
+        border-radius: 2px;
+      }
+
+      .bottom-box-div {
+        margin: 40px 50px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .bottom-box-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bottom-box-icon img {
+        width: 55px;
+        height: 55px;
+      }
+
+      .bottom-box-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .bottom-box-number {
+        font-family: "rubik";
+        font-size: 20px;
+        font-weight: bold;
+        color: #0b132a;
+      }
+
+      .bottom-box-label {
+        font-family: "rubik";
+        font-size: 14px;
+        color: #4f5665;
       }
     </style>
   </head>
@@ -169,9 +261,52 @@
         </div>
       </div>
 
-      <div class="content-center-div"></div>
+      <div class="content-center-div">
+        <div class="center-text-title">
+          Want anything to be easy with <strong>LaslesVPN.</strong>
+          <div class="center-text-content">
+            Provide a network for all your needs with ease and fun
+            usingLaslesVPN discover interesting features from us.
+          </div>
+          <button class="button-get-started">Get Started</button>
+        </div>
 
-      <div class="content-bottom-div"></div>
+        <div>
+          <img class="center-image" src="img/landing-page-image.png" alt="" />
+        </div>
+      </div>
+
+      <div class="content-bottom-div">
+        <div class="bottom-box-div">
+          <div class="bottom-box-icon">
+            <img src="img/user.png" alt="Users" />
+          </div>
+          <div class="bottom-box-text">
+            <div class="bottom-box-number">90+</div>
+            <div class="bottom-box-label">Users</div>
+          </div>
+        </div>
+
+        <div class="bottom-box-div">
+          <div class="bottom-box-icon">
+            <img src="img/location.png" alt="Locations" />
+          </div>
+          <div class="bottom-box-text">
+            <div class="bottom-box-number">30+</div>
+            <div class="bottom-box-label">Locations</div>
+          </div>
+        </div>
+
+        <div class="bottom-box-div">
+          <div class="bottom-box-icon">
+            <img src="img/server.png" alt="Servers" />
+          </div>
+          <div class="bottom-box-text">
+            <div class="bottom-box-number">50+</div>
+            <div class="bottom-box-label">Servers</div>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
