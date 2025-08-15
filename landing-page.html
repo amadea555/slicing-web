@@ -5,222 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LaslesVPN</title>
 
-    <style>
-      * {
-        padding: 0;
-      }
-      body {
-        overflow-x: hidden; /* cegah scroll horizontal */
-        margin: 7px 10px;
-      }
-      @font-face {
-        font-family: "rubik";
-        src: url(rubik-font-woff/Rubik-Regular.woff) format("woff");
-        font-style: normal;
-        font-weight: 400;
-      }
-      @font-face {
-        font-family: "rubik";
-        src: url(rubik-font-woff/Rubik-Medium.woff) format("woff");
-        font-style: normal;
-        font-weight: 500;
-      }
-      @font-face {
-        font-family: "rubik";
-        src: url(rubik-font-woff/Rubik-Bold.woff) format("woff");
-        font-style: normal;
-        font-weight: 700;
-      }
-      @font-face {
-        font-family: "rubik";
-        src: url(rubik-font-woff/Rubik-Light.woff) format("woff");
-        font-style: normal;
-        font-weight: 300;
-      }
-      .section-one {
-        display: inline-block;
-        width: 100vw;
-        height: auto;
-      }
-      .navbar-div {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        height: auto;
-      }
-      .navbar-left,
-      .navbar-center,
-      .navbar-right {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        margin: 25px;
-      }
-      .navbar-logo {
-        display: flex;
-        margin-left: 15px;
-        align-items: center;
-      }
-      .navbar-logo .logo-image {
-        height: fit-content;
-        width: 155px;
-        height: auto;
-      }
-      .navbar-menu ul {
-        text-align: center;
-        display: flex;
-        list-style: none;
-        gap: 40px;
-        margin-left: 100px;
-        padding: 0;
-      }
-      .navbar-menu ul li a {
-        text-decoration: none;
-        color: black;
-        font-family: "rubik", serif;
-        font-size: 17.6px;
-        transition: color 0.3s;
-      }
-      .navbar-menu ul li a:hover {
-        color: #f53838;
-      }
-      .navbar-button {
-        text-align: center;
-        display: flex;
-        align-items: center;
-      }
-      .navbar-button .button-signin {
-        background-color: transparent;
-        border: none;
-        border-radius: 50px;
-        color: #f53838;
-        font-family: "rubik";
-        font-size: 17.6px;
-        padding: 8px 32px;
-        transform: scale(1);
-        transition: all 0.3s cubic-bezier(1, 0, 0, 1);
-      }
-      .navbar-button .button-signin:hover {
-        background-color: #f53838;
-        color: #fff;
-        transform: scale(1.03) translateY(-0.2rem);
-        box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
-      }
-      .navbar-button .button-signup {
-        background-color: transparent;
-        border: 1px solid #f53838;
-        border-radius: 50px;
-        color: #f53838;
-        font-family: "rubik";
-        font-size: 17.6px;
-        padding: 8px 32px;
-        transform: scale(1);
-        transition: all 0.3s cubic-bezier(1, 0, 0, 1);
-      }
-      .navbar-button .button-signup:hover {
-        background-color: #f53838;
-        color: #fff;
-        transform: scale(1.03) translateY(-0.2rem);
-        box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
-      }
-      .content-center-div {
-        height: auto;
-        display: flex;
-      }
-      .content-center-div .center-text-title {
-        margin-top: 150px;
-        margin-left: 100px;
-        text-align: start;
-        font-family: "rubik";
-        font-weight: 500;
-        font-size: 48px;
-      }
-      .content-center-div .center-text-content {
-        margin-top: 30px;
-        max-width: 3;
-        font-family: "rubik";
-        text-align: start;
-        font-weight: 400;
-        font-size: 17.6px;
-        line-height: 30px;
-      }
-      .button-get-started {
-        margin-top: 40px;
-        background-color: #f53838;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        font-family: "rubik";
-        font-size: 18px;
-        padding: 17px 80px;
-        transform: scale(1);
-        transition: all 0.3s cubic-bezier(1, 0, 0, 1);
-      }
-
-      .button-get-started:hover {
-        background-color: #f53838;
-        transform: scale(1.03) translateY(-0.2rem);
-        box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
-      }
-
-      .content-center-div .center-image {
-        margin: 25px 90px 0;
-        width: 43vw;
-        height: fit-content;
-      }
-      .content-bottom-div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1100px;
-        background: none;
-        box-shadow: 1px 1px 1px 1px #eee, -1px -1px 1px 1px #eee;
-        margin: 158px auto;
-        border-radius: 2px;
-      }
-
-      .bottom-box-div {
-        margin: 40px 50px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .bottom-box-icon {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .bottom-box-icon img {
-        width: 55px;
-        height: 55px;
-      }
-
-      .bottom-box-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .bottom-box-number {
-        font-family: "rubik";
-        font-size: 20px;
-        font-weight: bold;
-        color: #0b132a;
-      }
-
-      .bottom-box-label {
-        font-family: "rubik";
-        font-size: 14px;
-        color: #4f5665;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -308,5 +93,388 @@
         </div>
       </div>
     </section>
+
+    <section class="section-two">
+      <!-- Gambar fitur di kiri -->
+      <div class="image-features">
+        <img src="img/image-features.png" alt="Fitur Utama" />
+      </div>
+
+      <!-- Konten fitur di kanan -->
+      <div class="content-features">
+        <div class="title-features">
+          We Provide Many Features You <br />
+          Can Use
+        </div>
+
+        <div class="subtext-features">
+          You can explore the features that we provide with fun and have their
+          own function each feature.
+        </div>
+
+        <div class="list-features">
+          <figure class="feature-item">
+            <img src="img/checklist.png" alt="Check" />
+            <figcaption>Powerful online protection</figcaption>
+          </figure>
+
+          <figure class="feature-item">
+            <img src="img/checklist.png" alt="Check" />
+            <figcaption>Internet without borders</figcaption>
+          </figure>
+
+          <figure class="feature-item">
+            <img src="img/checklist.png" alt="Check" />
+            <figcaption>Supercharged VPN</figcaption>
+          </figure>
+
+          <figure class="feature-item">
+            <img src="img/checklist.png" alt="Check" />
+            <figcaption>No specific time limits</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-three">
+      <div class="title-plan">Choose Your Plan</div>
+      <div class="subtext-plan">
+        Let's choose the best package that is best for you and explore it
+        happily and cheerfully.
+      </div>
+
+      <div class="box-plan-container">
+        <!-- Free Plan -->
+        <div class="plan-item">
+          <div class="box-image-plan">
+            <img src="img/image-plan.png" alt="image-plan" />
+          </div>
+          <div class="box-title-plan">Free Plan</div>
+          <div class="box-wrapper-plan">
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Unlimited Bandwidth</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Encrypted Connection</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>No Traffic Logs</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Works on All Devices</figcaption>
+            </figure>
+          </div>
+          <div class="box-price-plan"><b>Free</b></div>
+          <button>Select</button>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="plan-item">
+          <div class="box-image-plan">
+            <img src="img/image-plan.png" alt="image-plan" />
+          </div>
+          <div class="box-title-plan">Standard Plan</div>
+          <div class="box-wrapper-plan">
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Unlimited Bandwidth</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Encrypted Connection</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>No Traffic Logs</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Works on All Devices</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Connect Anywhere</figcaption>
+            </figure>
+          </div>
+          <div class="box-price-plan"><b>$9</b> /mo</div>
+          <button>Select</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan-item">
+          <div class="box-image-plan">
+            <img src="img/image-plan.png" alt="image-plan" />
+          </div>
+          <div class="box-title-plan">Premium Plan</div>
+          <div class="box-wrapper-plan">
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Unlimited Bandwidth</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Encrypted Connection</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>No Traffic Logs</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Works on All Devices</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Connect Anywhere</figcaption>
+            </figure>
+            <figure class="box-list-plan-item">
+              <img src="img/checklist-plan.png" alt="Checklist" />
+              <figcaption>Get New Features</figcaption>
+            </figure>
+          </div>
+
+          <div class="box-list-plan-bottom">
+            <div class="box-price-plan"><b>$12 </b> /mo</div>
+            <button>Select</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-four">
+      <div class="section-four-title">Huge Global Network of Fast VPN</div>
+      <div class="section-four-subtext">
+        See LaslesVPN everywhere to make it easier for you when you move
+        locations.
+      </div>
+      <div class="section-four-map">
+        <img src="img/map.png" alt="map" />
+      </div>
+      <div class="section-four-sponsor">
+        <img src="img/sponsor.png" alt="sponsor" />
+      </div>
+    </section>
+
+    <section class="section-five">
+      <div class="section-five-title">
+        Trusted by Thousands of Happy Customer
+      </div>
+      <div class="section-five-subtext">
+        These are the stories of our customers who have joined us with great
+        pleasure when using <br />
+        this crazy feature.
+      </div>
+
+      <div class="review-wrapper">
+        <div class="review-box">
+          <div class="review-box-top">
+            <div class="review-box-profile">
+              <img src="img/profile-one.png" alt="profile" />
+            </div>
+
+            <div class="review-box-identity">
+              <div class="review-box-name">
+                <h5>Viezh Robert</h5>
+              </div>
+              <div class="review-box-place">Warsaw, Poland</div>
+            </div>
+
+            <div class="review-box-rating">
+              <div class="review-box-score">4.5</div>
+              <div class="review-box-star">
+                <img src="img/star-review.png" alt="star" />
+              </div>
+            </div>
+          </div>
+
+          <div class="review-box-center">
+            <div class="review-box-text">
+              "Wow... I am very happy to use this VPN. it turned out to be more
+              than my expectations and so far there has been no problems.
+              LaslesVPN always the best".
+            </div>
+          </div>
+        </div>
+
+        <div class="review-box">
+          <div class="review-box-top">
+            <div class="review-box-profile">
+              <img src="img/profile-two.png" alt="profile" />
+            </div>
+
+            <div class="review-box-identity">
+              <div class="review-box-name">
+                <h5>Yessica Christy</h5>
+              </div>
+              <div class="review-box-place">Shanxi, China</div>
+            </div>
+
+            <div class="review-box-rating">
+              <div class="review-box-score">4.5</div>
+              <div class="review-box-star">
+                <img src="img/star-review.png" alt="star" />
+              </div>
+            </div>
+          </div>
+
+          <div class="review-box-center">
+            <div class="review-box-text">
+              "I like it because I like to travel far and still connect with
+              high speed".
+            </div>
+          </div>
+        </div>
+        <div class="review-box">
+          <div class="review-box-top">
+            <div class="review-box-profile">
+              <img src="img/profile-three.png" alt="profile" />
+            </div>
+
+            <div class="review-box-identity">
+              <div class="review-box-name">
+                <h5>Kim Young Jou</h5>
+              </div>
+              <div class="review-box-place">Seoul, South Korea</div>
+            </div>
+
+            <div class="review-box-rating">
+              <div class="review-box-score">4.5</div>
+              <div class="review-box-star">
+                <img src="img/star-review.png" alt="star" />
+              </div>
+            </div>
+          </div>
+
+          <div class="review-box-center">
+            <div class="review-box-text">
+              "This is very unusual for my business that currently requires a
+              virtual private network that has high security".
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-five-slide">
+        <div class="slide-move">
+          <img src="img/slide-move.png" alt="slide-move" />
+        </div>
+
+        <div class="slide-arrow">
+          <div class="arrow-buttons">
+            <!-- Panah Kiri -->
+            <button class="arrow-btn left-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </button>
+
+            <!-- Panah Kanan -->
+            <button class="arrow-btn right-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subscribe-wrapper">
+        <div class="subscribe-content">
+          <div class="subscribe-text">
+            <div class="subscribe-title">
+              Subscribe Now for Get Special Features!
+            </div>
+            <div class="subscribe-subtext">
+              Let's subscribe with us and find the fun.
+            </div>
+          </div>
+
+          <button class="subscribe-button">Subscribe Now</button>
+        </div>
+      </div>
+    </section>
+
+   <footer class="footer-wrapper">
+  <div class="footer-left-content">
+    <div class="footer-logo-text">
+      <img src="img/logo-landing-page.png" alt="LaslesVPN Logo" class="footer-logo" />
+    </div>
+
+    <p class="footer-subtext">
+      LaslesVPN is a private virtual network that has unique features and has high security.
+    </p>
+
+    <div class="footer-social-wrapper">
+      <a href="#"><img src="img/Facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="img/Twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="img/Instagram.png" alt="Instagram" /></a>
+    </div>
+
+    <p class="footer-copyright">
+      ©2020LaslesVPN
+    </p>
+  </div>
+
+  <div class="footer-right-content">
+    <div class="footer-column">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Server</a></li>
+        <li><a href="#">Countries</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Engage</h4>
+      <ul>
+        <li><a href="#">LaslesVPN ?</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Earn Money</h4>
+      <ul>
+        <li><a href="#">Affiliate</a></li>
+        <li><a href="#">Become Partner</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
   </body>
 </html>
