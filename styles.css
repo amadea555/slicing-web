@@ -6,7 +6,7 @@
 }
 body {
   overflow-x: hidden; /* cegah scroll horizontal */
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 @font-face {
   font-family: "rubik";
@@ -32,17 +32,20 @@ body {
   font-style: normal;
   font-weight: 300;
 }
+
 .section-one {
   display: inline-block;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   height: auto;
+  padding: 1px 100px 0 100px;
 }
 .navbar-div {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 100vw;
   width: 100%;
-  height: auto;
 }
 .navbar-left,
 .navbar-center,
@@ -59,7 +62,8 @@ body {
 }
 .navbar-logo .logo-image {
   height: fit-content;
-  width: 155px;
+  max-width: 155px;
+  width: 100%;
   height: auto;
 }
 .navbar-menu ul {
@@ -184,8 +188,10 @@ body {
 }
 
 .bottom-box-icon {
-  width: 70px;
-  height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -193,8 +199,10 @@ body {
 }
 
 .bottom-box-icon img {
-  width: 55px;
-  height: 55px;
+  max-width: 55px;
+  max-height: 55px;
+  width: 100%;
+  height: 100%;
 }
 
 .bottom-box-text {
@@ -219,14 +227,15 @@ body {
 .section-two {
   display: flex;
   align-items: flex-start;
-  width: 100vw;
+  max-width: 100vw;
+  width: 100%;
   padding: 1px 100px 0 100px;
 }
 
 .image-features img {
-  width: 43vw;
+  max-width: 43vw;
+  width: 100%;
   height: auto;
-  object-fit: contain;
   margin-right: 30px;
 }
 
@@ -240,7 +249,7 @@ body {
 
 .title-features {
   font-family: "rubik", sans-serif;
-  font-size: 32px;
+  font-size: 33px;
   font-weight: 500;
   line-height: 1.3;
   color: #0b132a;
@@ -266,8 +275,10 @@ body {
 }
 
 .feature-item img {
-  width: 25px;
-  height: 25px;
+  max-width: 25px;
+  max-height: 25px;
+  width: 100%;
+  height: 100%;
 }
 
 .feature-item figcaption {
@@ -279,7 +290,7 @@ body {
 .section-three {
   text-align: center;
   font-family: Arial, sans-serif;
-  padding: 50px 20px;
+  padding: 1px 100px 0 100px;
 }
 
 .title-plan {
@@ -308,6 +319,8 @@ body {
 .plan-item {
   max-width: 347px;
   max-height: 628px;
+  width: 100%;
+  height: 100%;
   flex: 1;
   border: 2px solid #ddd;
   border-radius: 10px;
@@ -323,7 +336,8 @@ body {
 }
 
 .box-image-plan img {
-  width: 146px;
+  width: 100%;
+  max-width: 146px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -339,21 +353,24 @@ body {
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
-  width: 347px;
+  max-width: 347px;
+  width: 100%;
   height: 628px;
 }
 
 .box-list-plan-item {
   line-height: 30px;
-  padding-left: 80px;
+  /* padding-left: 8px; */
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .box-list-plan-item img {
-  width: 20px;
-  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .box-list-plan-item figcaption {
@@ -371,7 +388,8 @@ body {
 }
 
 button {
-  width: 176px;
+  max-width: 176px;
+  width: 100%;
   padding: 8px;
   border-radius: 25px;
   border: 2px solid #f53838;
@@ -394,7 +412,8 @@ button:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100vw;
+  max-width: 100vw;
+  width: 100%;
   padding: 45px 100px 0 100px;
 }
 
@@ -417,14 +436,14 @@ button:hover {
 .section-four-map img {
   padding: 60px 0 0;
   width: 100%;
-  height: 100;
+  height: 100%;
   align-items: center;
 }
 
 .section-four-sponsor img {
   padding: 60px 0 0;
   width: 100%;
-  height: 100;
+  height: 100%;
   align-items: center;
 }
 
@@ -432,7 +451,8 @@ button:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100vw;
+  max-width: 100vw;
+  width: 100%;
   padding: 45px 100px 0 100px;
 }
 
@@ -458,21 +478,24 @@ button:hover {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 230px;
+  height: 100%;
 }
 
 .review-box {
   background-color: white;
   border: 1px solid #ddd;
   padding: 32px 24px;
-  width: 410px;
-  height: 247px;
+  max-width: 410px;
+  max-height: 247px;
+  width: 100%;
   border-radius: 10px;
 }
 
 .review-box-top {
-  width: 359px;
-  height: 55px;
+  max-width: 359px;
+  max-height: 55px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -480,15 +503,19 @@ button:hover {
 }
 
 .review-box-profile img {
-  width: 50px;
-  height: 51px;
+  max-width: 50px;
+  max-height: 51px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
 .review-box-identity {
   padding: 0 16px 0 16px;
-  width: 150px;
-  height: 55px;
+  max-width: 150px;
+  max-height: 55px;
+  width: 100%;
+  height: 100%;
   margin: 0 100px 0 0;
   padding: 0 0 0 16px;
   flex-direction: row;
@@ -515,8 +542,10 @@ button:hover {
 
 .review-box-rating {
   margin: 0 0 10px 0;
-  width: 56px;
-  height: 55px;
+  max-width: 56px;
+  max-height: 55px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -533,13 +562,17 @@ button:hover {
 
 .review-box-star img {
   align-content: end;
-  width: 16px;
-  height: 17px;
+  max-width: 16px;
+  max-height: 17px;
+  width: 100%;
+  height: 100%;
 }
 
 .review-box-center {
-  width: 359px;
-  height: 108px;
+  max-width: 359px;
+  max-height: 108px;
+  width: 100%;
+  height: 100%;
 }
 
 .review-box-text {
@@ -553,15 +586,17 @@ button:hover {
 }
 
 .section-five-slide {
-  width: 1336px;
-  padding: 40px 0 10px 40px;
+  max-width: 1336px;
+  width: 100%;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .slide-move img {
-  width: 102px;
+  max-width: 102px;
+  width: 100%;
   height: auto;
 }
 
@@ -579,8 +614,10 @@ button:hover {
 
 /* Style umum tombol */
 .arrow-btn {
-  width: 50px;
-  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border: 2px solid #f44336;
   background-color: white;
@@ -607,15 +644,18 @@ button:hover {
 
 /* Pastikan SVG ikut warna currentColor */
 .arrow-btn svg {
-  width: 20px;
-  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .subscribe-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1094px;
+  max-width: 1094px;
+  width: 100%;
 }
 
 .subscribe-wrapper {
@@ -624,6 +664,7 @@ button:hover {
   justify-content: space-around;
   align-items: center;
   max-width: 1200px;
+  width: 100%;
   background: none;
   box-shadow: 2px 2px 5px 1px #eee, -2px -2px 5px 2px #eee;
   margin: 100px auto 30px;
@@ -631,8 +672,10 @@ button:hover {
 }
 
 .subscribe-text {
-  width: 468px;
-  height: 122px;
+  max-width: 468px;
+  max-height: 122px;
+  width: 100%;
+  height: 100%;
 }
 
 .subscribe-title {
@@ -669,16 +712,19 @@ button:hover {
 }
 
 .footer-wrapper {
+  height: max-content;
   display: flex;
   justify-content: space-between;
-  padding: 60px 80px;
+  padding: 60px 80px 0 80px;
   background-color: #f8f8f8;
   font-family: "Rubik", sans-serif;
   color: #0b132a;
+  margin: 100px 0 0 0;
 }
 
 .footer-left-content {
   max-width: 350px;
+  width: 100%;
 }
 
 .footer-logo-text {
@@ -688,7 +734,8 @@ button:hover {
 }
 
 .footer-logo {
-  width: 149px;
+  max-width: 149px;
+  width: 100%;
   height: auto;
 }
 
@@ -713,17 +760,15 @@ button:hover {
 }
 
 .footer-social-wrapper img {
-  width: 90px;
-  height: 90px;
+  width: 33px;
+  height: auto;
   border-radius: 50%;
-  padding: 8px;
   transform: scale(1);
   transition: all 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
 .footer-social-wrapper img:hover {
   transform: scale(1.03) translateY(-0.2rem);
-
   transition: 0.3s;
 }
 
