@@ -34,7 +34,8 @@ body {
 }
 
 .section-one {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 100vw;
   height: auto;
@@ -42,12 +43,16 @@ body {
 }
 .navbar-div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   max-width: 100vw;
   width: 100%;
 }
-.navbar-left,
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start ;
+}
 .navbar-center,
 .navbar-right {
   display: flex;
@@ -57,7 +62,6 @@ body {
 }
 .navbar-logo {
   display: flex;
-  margin-left: 15px;
   align-items: center;
 }
 .navbar-logo .logo-image {
@@ -129,7 +133,6 @@ body {
 }
 .content-center-div .center-text-title {
   margin-top: 150px;
-  margin-left: 100px;
   text-align: start;
   font-family: "rubik";
   font-weight: 500;
@@ -145,7 +148,7 @@ body {
   line-height: 30px;
 }
 .button-get-started {
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: #f53838;
   border: none;
   border-radius: 5px;
@@ -229,13 +232,12 @@ body {
   align-items: flex-start;
   max-width: 100vw;
   width: 100%;
-  padding: 1px 100px 0 100px;
+  padding: 1px 100px 100px 100px;
 }
 
 .image-features img {
   max-width: 43vw;
-  width: 100%;
-  height: auto;
+  height: fit-content;
   margin-right: 30px;
 }
 
@@ -320,7 +322,6 @@ body {
   max-width: 347px;
   max-height: 628px;
   width: 100%;
-  height: 100%;
   flex: 1;
   border: 2px solid #ddd;
   border-radius: 10px;
@@ -355,7 +356,8 @@ body {
   margin-bottom: 20px;
   max-width: 347px;
   width: 100%;
-  height: 628px;
+  max-height: 628px;
+  height: 100%;
 }
 
 .box-list-plan-item {
@@ -387,7 +389,7 @@ body {
   margin-bottom: 20px;
 }
 
-button {
+.button {
   max-width: 176px;
   width: 100%;
   padding: 8px;
@@ -403,7 +405,7 @@ button {
   transition: all 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
-button:hover {
+.button:hover {
   background: red;
   color: white;
 }
@@ -614,8 +616,6 @@ button:hover {
 
 /* Style umum tombol */
 .arrow-btn {
-  max-width: 50px;
-  max-height: 50px;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -642,12 +642,15 @@ button:hover {
   color: white;
 }
 
-/* Pastikan SVG ikut warna currentColor */
+/* Panah kanan default */
+.left-arrow {
+  background-color: white;
+  color: #f44336;
+}
+
 .arrow-btn svg {
-  max-width: 20px;
-  max-height: 20px;
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
 }
 
 .subscribe-content {
@@ -661,13 +664,13 @@ button:hover {
 .subscribe-wrapper {
   display: flex;
   padding: 64px 80px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  width: 100%;
+  max-height: 950px;
   background: none;
   box-shadow: 2px 2px 5px 1px #eee, -2px -2px 5px 2px #eee;
-  margin: 100px auto 30px;
+  margin-top: 90px;
   border-radius: 2px;
 }
 
@@ -693,7 +696,9 @@ button:hover {
 }
 
 .subscribe-button {
-  background-color: #f53838;
+  max-width: 218px;
+  width: 100%;
+  background-color: hsl(0, 90%, 59%);
   border: none;
   border-radius: 5px;
   color: #fff;
