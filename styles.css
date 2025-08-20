@@ -168,7 +168,8 @@ body {
 
 .content-center-div .center-image {
   margin: 25px 90px 0;
-  width: 43vw;
+  max-width: 664px;
+  width: 100%;
   height: fit-content;
 }
 .content-bottom-div {
@@ -236,7 +237,8 @@ body {
 }
 
 .image-features img {
-  max-width: 43vw;
+  max-width: 684px;
+  width: 100%;
   height: fit-content;
   margin-right: 30px;
 }
@@ -661,28 +663,25 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hover: berubah seperti panah kanan */
 .arrow-btn:hover {
-  background-color: #f44336;
-  color: white;
   transform: scale(1.1);
 }
 
-/* Panah kanan default */
-.right-arrow {
+/* kondisi active: lingkaran merah, panah putih */
+.arrow-btn.active {
   background-color: #f44336;
   color: white;
 }
 
-/* Panah kanan default */
-.left-arrow {
+/* kondisi normal: lingkaran putih, panah merah */
+.arrow-btn.inactive {
   background-color: white;
   color: #f44336;
 }
 
 .arrow-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: auto;
 }
 
 .subscribe-content {

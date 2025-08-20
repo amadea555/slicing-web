@@ -40,8 +40,8 @@
 
   .content-center-div .center-image {
     margin: 0;
-    width: 70%;
-    height: fit-content;
+    width: 262px;
+    height: auto;
     display: flex;
     justify-content: center;
   }
@@ -71,8 +71,9 @@
 
   .content-bottom-div {
     box-shadow: none;
-    margin: 60px 0;
-    padding: 10px 10px;
+    margin: 0;
+    padding: 10px 50px 30px 0;
+    gap: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -102,6 +103,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 291px;
+    height: auto;
   }
 
   .title-features {
