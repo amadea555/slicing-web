@@ -2,7 +2,7 @@ const navbarList = document.getElementById("navbar-list");
 
 async function loadNavbar() {
   try {
-    const response = await fetch("../data/navbar.json"); // otomatis GET
+    const response = await fetch("./data/navbar.json"); // otomatis GET
     const data = await response.json();
 
     data.navbar.forEach((item) => {
@@ -24,7 +24,7 @@ loadNavbar();
 
 async function loadSectionOneTitle() {
   try {
-    const response = await fetch("../data/section-one.json"); // JSON kamu
+    const response = await fetch("./data/section-one.json"); // JSON kamu
     const data = await response.json();
 
     const sectionTitle = data["section-one-title"][0]; // ambil isi array pertama
@@ -49,7 +49,7 @@ loadSectionOneTitle();
 
 async function loadSectionOneSubtext() {
   try {
-    const response = await fetch("../data/section-one.json"); // ambil file JSON
+    const response = await fetch("./data/section-one.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -69,7 +69,7 @@ loadSectionOneSubtext();
 
 async function loadSectionTwoTitle() {
   try {
-    const response = await fetch("../data/section-two.json"); // ambil file JSON
+    const response = await fetch("./data/section-two.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -89,7 +89,7 @@ loadSectionTwoTitle();
 
 async function loadSectionTwoSubtext() {
   try {
-    const response = await fetch("../data/section-two.json"); // ambil file JSON
+    const response = await fetch("./data/section-two.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -109,7 +109,7 @@ loadSectionTwoSubtext();
 
 async function loadSectionTwoList() {
   try {
-    const response = await fetch("../data/section-two.json"); // otomatis GET
+    const response = await fetch("./data/section-two.json"); // otomatis GET
     const data = await response.json();
 
     // Ambil array dari JSON
@@ -124,7 +124,7 @@ async function loadSectionTwoList() {
       figure.classList.add("feature-item");
 
       const img = document.createElement("img");
-      img.src = "../img/checklist.png";
+      img.src = "./img/checklist.png";
       img.alt = "Check";
 
       const caption = document.createElement("figcaption");
@@ -146,7 +146,7 @@ loadSectionTwoList();
 
 async function loadSectionThreeTitle() {
   try {
-    const response = await fetch("../data/section-three.json"); // ambil file JSON
+    const response = await fetch("./data/section-three.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -166,7 +166,7 @@ loadSectionThreeTitle();
 
 async function loadSectionThreeSubtext() {
   try {
-    const response = await fetch("../data/section-three.json"); // ambil file JSON
+    const response = await fetch("./data/section-three.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -186,7 +186,7 @@ loadSectionThreeSubtext();
 
 async function loadPlanItemImage() {
   try {
-    const response = await fetch("../data/section-three.json");
+    const response = await fetch("./data/section-three.json");
     const data = await response.json();
 
     // Ambil elemen gambar
@@ -205,7 +205,7 @@ loadPlanItemImage();
 
 async function loadBoxPlanOneTitle() {
   try {
-    const response = await fetch("../data/section-three.json"); // ambil file JSON
+    const response = await fetch("./data/section-three.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -227,7 +227,7 @@ loadBoxPlanOneTitle();
 
 async function loadBoxPlanOneList() {
   try {
-    const response = await fetch("../data/section-three.json"); // ambil file JSON
+    const response = await fetch("./data/section-three.json"); // ambil file JSON
     const data = await response.json();
 
     // Ambil array dari JSON
@@ -266,7 +266,7 @@ loadBoxPlanOneList();
 
 async function loadBoxPlanTwoTitle() {
   try {
-    const response = await fetch("../data/section-three.json"); // ambil file JSON
+    const response = await fetch("./data/section-three.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -286,7 +286,7 @@ loadBoxPlanTwoTitle();
 
 async function loadBoxPlanTwoList() {
   try {
-    const response = await fetch("../data/section-three.json"); // ambil file JSON
+    const response = await fetch("./data/section-three.json"); // ambil file JSON
     const data = await response.json();
 
     // Ambil array dari JSON
@@ -325,7 +325,7 @@ loadBoxPlanTwoList();
 
 async function loadBoxPlanThreeTitle() {
   try {
-    const response = await fetch("../data/section-three.json"); // ambil file JSON
+    const response = await fetch("./data/section-three.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -345,7 +345,7 @@ loadBoxPlanThreeTitle();
 
 async function loadBoxPlanThreeList() {
   try {
-    const response = await fetch("../data/section-three.json"); // ambil file JSON
+    const response = await fetch("./data/section-three.json"); // ambil file JSON
     const data = await response.json();
 
     // Ambil array dari JSON
@@ -384,7 +384,7 @@ loadBoxPlanThreeList();
 
 async function loadBoxPlanOnePrice() {
   try {
-    const response = await fetch("../data/section-three.json");
+    const response = await fetch("./data/section-three.json");
     const data = await response.json();
 
     const sectionPlan = data["box-plan-one-price"][0]; // ambil isi array pertama
@@ -405,7 +405,7 @@ loadBoxPlanOnePrice();
 
 async function loadBoxPlanTwoPrice() {
   try {
-    const response = await fetch("../data/section-three.json");
+    const response = await fetch("./data/section-three.json");
     const data = await response.json();
 
     const sectionPlan = data["box-plan-two-price"][0]; // ambil isi array pertama
@@ -433,7 +433,7 @@ loadBoxPlanTwoPrice();
 
 async function loadBoxPlanThreePrice() {
   try {
-    const response = await fetch("../data/section-three.json");
+    const response = await fetch("./data/section-three.json");
     const data = await response.json();
 
     const sectionPlan = data["box-plan-three-price"][0]; // ambil isi array pertama
@@ -461,7 +461,7 @@ loadBoxPlanThreePrice();
 
 async function loadSectionFourTitle() {
   try {
-    const response = await fetch("../data/section-four.json"); // ambil file JSON
+    const response = await fetch("./data/section-four.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -481,7 +481,7 @@ loadSectionFourTitle();
 
 async function loadSectionFourSubtext() {
   try {
-    const response = await fetch("../data/section-four.json"); // ambil file JSON
+    const response = await fetch("./data/section-four.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -501,7 +501,7 @@ loadSectionFourSubtext();
 
 async function loadSectionFourMap() {
   try {
-    const response = await fetch("../data/section-four.json");
+    const response = await fetch("./data/section-four.json");
     const data = await response.json();
 
     // Ambil elemen gambar
@@ -520,7 +520,7 @@ loadSectionFourMap();
 
 async function loadSectionFourSponsor() {
   try {
-    const response = await fetch("../data/section-four.json");
+    const response = await fetch("./data/section-four.json");
     const data = await response.json();
 
     // Ambil elemen gambar
@@ -539,7 +539,7 @@ loadSectionFourSponsor();
 
 async function loadSectionFiveTitle() {
   try {
-    const response = await fetch("../data/section-five.json"); // ambil file JSON
+    const response = await fetch("./data/section-five.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -559,7 +559,7 @@ loadSectionFiveTitle();
 
 async function loadSectionFiveSubtext() {
   try {
-    const response = await fetch("../data/section-five.json"); // ambil file JSON
+    const response = await fetch("./data/section-five.json"); // ambil file JSON
     const data = await response.json();
 
     // ambil elemen pertama dari array
@@ -579,7 +579,7 @@ loadSectionFiveSubtext();
 
 async function loadReviews() {
   try {
-    const response = await fetch("../data/review-box.json"); // ambil JSON array
+    const response = await fetch("./data/review-box.json"); // ambil JSON array
     const data = await response.json(); // hasil: array of objects
 
     const container = document.getElementById("reviews-container");
@@ -671,7 +671,7 @@ loadFooterLeft();
 
 async function loadFooterRight() {
   try {
-    const response = await fetch("../data/footer-list.json");
+    const response = await fetch("./data/footer-list.json");
     const data = await response.json();
 
     // --- Product ---
