@@ -8,11 +8,11 @@
     ],
     
     "section-four-map":[
-        "../img/map.png"
+        "./img/map.png"
     ],
 
     "section-four-sponsor":[
-        "../img/sponsor.png"
+        "./img/sponsor.png"
     ]
 
 

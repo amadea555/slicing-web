@@ -5,7 +5,7 @@
     "Let's choose the best package that is best for you and explore it happily and cheerfully."
   ],
 
-  "plan-item-image": "../img/image-plan.png",
+  "plan-item-image": "./img/image-plan.png",
 
   "box-plan-one-title": ["Free Plan"],
 
