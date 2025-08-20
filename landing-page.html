@@ -6,6 +6,7 @@
     <title>LaslesVPN</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css?v=1.0" />  --untuk menghindari error saat diload di hp -->
     <link rel="stylesheet" href="responsive.css" />
   </head>
 
@@ -26,13 +27,7 @@
         <!-- menu part -->
         <div class="navbar-center">
           <div class="navbar-menu">
-            <ul>
-              <li><a href="#empty">About</a></li>
-              <li><a href="#empty">Features</a></li>
-              <li><a href="#empty">Pricing</a></li>
-              <li><a href="#empty">Testimonials</a></li>
-              <li><a href="#empty">Help</a></li>
-            </ul>
+            <ul id="navbar-list"></ul>
           </div>
         </div>
 
@@ -49,11 +44,12 @@
 
       <div class="content-center-div">
         <div class="center-text-title">
-          Want anything to be easy with <strong>LaslesVPN.</strong>
+          <p id="id-center-text-title"></p>
+
           <div class="center-text-content">
-            Provide a network for all your needs with ease and fun
-            usingLaslesVPN discover interesting features from us.
+            <p id="id-center-text-subtext"></p>
           </div>
+
           <button class="button-get-started">Get Started</button>
         </div>
 
@@ -102,73 +98,49 @@
       <!-- Konten fitur di kanan -->
       <div class="content-features">
         <div class="title-features">
-          We Provide Many Features You <br />
-          Can Use
+          <p id="id-title-features"></p>
         </div>
 
         <div class="subtext-features">
-          You can explore the features that we provide with fun and have their
-          own function each feature.
+          <p id="id-subtext-features"></p>
         </div>
 
         <div class="list-features">
           <figure class="feature-item">
-            <img src="img/checklist.png" alt="Check" />
-            <figcaption>Powerful online protection</figcaption>
-          </figure>
-
-          <figure class="feature-item">
-            <img src="img/checklist.png" alt="Check" />
-            <figcaption>Internet without borders</figcaption>
-          </figure>
-
-          <figure class="feature-item">
-            <img src="img/checklist.png" alt="Check" />
-            <figcaption>Supercharged VPN</figcaption>
-          </figure>
-
-          <figure class="feature-item">
-            <img src="img/checklist.png" alt="Check" />
-            <figcaption>No specific time limits</figcaption>
+            <figcaption id="id-feature-item"></figcaption>
           </figure>
         </div>
       </div>
     </section>
 
     <section class="section-three">
-      <div class="title-plan">Choose Your Plan</div>
+      <!-- Judul & Subjudul -->
+      <div class="title-plan">
+        <p id="id-title-plan"></p>
+      </div>
       <div class="subtext-plan">
-        Let's choose the best package that is best for you and explore it
-        happily and cheerfully.
+        <p id="id-subtext-plan"></p>
       </div>
 
+      <!-- Container semua plan -->
       <div class="box-plan-container">
         <!-- Free Plan -->
         <div class="plan-item">
           <div class="box-image-plan">
-            <img src="img/image-plan.png" alt="image-plan" />
+            <img class="class-box-image-plan" src="" alt="plan-image" />
           </div>
-          <div class="box-title-plan">Free Plan</div>
-          <div class="box-wrapper-plan">
+          <div class="box-title-plan">
+            <p id="id-box-plan-one-title"></p>
+          </div>
+          <div class="box-wrapper-plan-one">
             <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Unlimited Bandwidth</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Encrypted Connection</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>No Traffic Logs</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Works on All Devices</figcaption>
+              <figcaption></figcaption>
             </figure>
           </div>
           <div class="box-list-plan-bottom">
-            <div class="box-price-plan"><b>Free </b></div>
+            <div class="box-price-plan">
+              <p id="id-box-plan-one-price"></p>
+            </div>
             <button class="button">Select</button>
           </div>
         </div>
@@ -176,33 +148,20 @@
         <!-- Standard Plan -->
         <div class="plan-item">
           <div class="box-image-plan">
-            <img src="img/image-plan.png" alt="image-plan" />
+            <img class="class-box-image-plan" src="" alt="plan-image" />
           </div>
-          <div class="box-title-plan">Standard Plan</div>
-          <div class="box-wrapper-plan">
+          <div class="box-title-plan">
+            <p id="id-box-plan-two-title"></p>
+          </div>
+          <div class="box-wrapper-plan-two">
             <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Unlimited Bandwidth</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Encrypted Connection</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>No Traffic Logs</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Works on All Devices</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Connect Anywhere</figcaption>
+              <figcaption></figcaption>
             </figure>
           </div>
           <div class="box-list-plan-bottom">
-            <div class="box-price-plan"><b>$9 </b> /mo</div>
+            <div class="box-price-plan">
+              <p id="id-box-plan-two-price"></p>
+            </div>
             <button class="button">Select</button>
           </div>
         </div>
@@ -210,37 +169,20 @@
         <!-- Premium Plan -->
         <div class="plan-item">
           <div class="box-image-plan">
-            <img src="img/image-plan.png" alt="image-plan" />
+            <img class="class-box-image-plan" src="" alt="plan-image" />
           </div>
-          <div class="box-title-plan">Premium Plan</div>
-          <div class="box-wrapper-plan">
+          <div class="box-title-plan">
+            <p id="id-box-plan-three-title"></p>
+          </div>
+          <div class="box-wrapper-plan-three">
             <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Unlimited Bandwidth</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Encrypted Connection</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>No Traffic Logs</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Works on All Devices</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Connect Anywhere</figcaption>
-            </figure>
-            <figure class="box-list-plan-item">
-              <img src="img/checklist-plan.png" alt="Checklist" />
-              <figcaption>Get New Features</figcaption>
+              <figcaption></figcaption>
             </figure>
           </div>
           <div class="box-list-plan-bottom">
-            <div class="box-price-plan"><b>$12 </b> /mo</div>
+            <div class="box-price-plan">
+              <p id="id-box-plan-three-price"></p>
+            </div>
             <button class="button">Select</button>
           </div>
         </div>
@@ -248,13 +190,14 @@
     </section>
 
     <section class="section-four">
-      <div class="section-four-title">Huge Global Network of Fast VPN</div>
+      <div class="section-four-title">
+        <p id="id-section-four-title"></p>
+      </div>
       <div class="section-four-subtext">
-        See LaslesVPN everywhere to make it easier for you when you move
-        locations.
+        <p id="id-section-four-subtext"></p>
       </div>
       <div class="section-four-map">
-        <img src="img/map.png" alt="map" />
+        <img src="" alt="" />
       </div>
       <div class="section-four-sponsor">
         <img src="img/sponsor.png" alt="sponsor" />
@@ -263,100 +206,14 @@
 
     <section class="section-five">
       <div class="section-five-title">
-        Trusted by Thousands of Happy Customer
+        <p id="id-section-five-title"></p>
       </div>
       <div class="section-five-subtext">
-        These are the stories of our customers who have joined us with great
-        pleasure when using this crazy feature.
+        <p id="id-section-five-subtext"></p>
       </div>
 
-      <div class="review-wrapper">
-        <div class="review-box">
-          <div class="review-box-top">
-            <div class="review-box-profile">
-              <img src="img/profile-one.png" alt="profile" />
-            </div>
-
-            <div class="review-box-identity">
-              <div class="review-box-name">
-                <h5>Viezh Robert</h5>
-              </div>
-              <div class="review-box-place">Warsaw, Poland</div>
-            </div>
-
-            <div class="review-box-rating">
-              <div class="review-box-score">4.5</div>
-              <div class="review-box-star">
-                <img src="img/star-review.png" alt="star" />
-              </div>
-            </div>
-          </div>
-
-          <div class="review-box-center">
-            <div class="review-box-text">
-              "Wow... I am very happy to use this VPN. it turned out to be more
-              than my expectations and so far there has been no problems.
-              LaslesVPN always the best".
-            </div>
-          </div>
-        </div>
-
-        <div class="review-box">
-          <div class="review-box-top">
-            <div class="review-box-profile">
-              <img src="img/profile-two.png" alt="profile" />
-            </div>
-
-            <div class="review-box-identity">
-              <div class="review-box-name">
-                <h5>Yessica Christy</h5>
-              </div>
-              <div class="review-box-place">Shanxi, China</div>
-            </div>
-
-            <div class="review-box-rating">
-              <div class="review-box-score">4.5</div>
-              <div class="review-box-star">
-                <img src="img/star-review.png" alt="star" />
-              </div>
-            </div>
-          </div>
-
-          <div class="review-box-center">
-            <div class="review-box-text">
-              "I like it because I like to travel far and still connect with
-              high speed".
-            </div>
-          </div>
-        </div>
-        <div class="review-box">
-          <div class="review-box-top">
-            <div class="review-box-profile">
-              <img src="img/profile-three.png" alt="profile" />
-            </div>
-
-            <div class="review-box-identity">
-              <div class="review-box-name">
-                <h5>Kim Young Jou</h5>
-              </div>
-              <div class="review-box-place">Seoul, South Korea</div>
-            </div>
-
-            <div class="review-box-rating">
-              <div class="review-box-score">4.5</div>
-              <div class="review-box-star">
-                <img src="img/star-review.png" alt="star" />
-              </div>
-            </div>
-          </div>
-
-          <div class="review-box-center">
-            <div class="review-box-text">
-              "This is very unusual for my business that currently requires a
-              virtual private network that has high security".
-            </div>
-          </div>
-        </div>
+      <div id="reviews-container" class="review-wrapper">
+        <!-- Hasil fetch dari JSON akan dimasukkan ke sini -->
       </div>
 
       <div class="section-five-slide">
@@ -405,10 +262,10 @@
         <div class="subscribe-content">
           <div class="subscribe-text">
             <div class="subscribe-title">
-              Subscribe Now for Get Special Features!
+              <p id="id-subscribe-title"></p>
             </div>
             <div class="subscribe-subtext">
-              Let's subscribe with us and find the fun.
+              <p id="id-subscribe-subtext"></p>
             </div>
           </div>
         </div>
@@ -426,10 +283,7 @@
           />
         </div>
 
-        <p class="footer-subtext">
-          LaslesVPN is a private virtual network that has unique features and
-          has high security.
-        </p>
+        <p class="footer-subtext" id="id-footer-subtext"></p>
 
         <div class="footer-social-wrapper">
           <a href="#"><img src="img/Facebook-2.png" alt="Facebook" /></a>
@@ -437,42 +291,27 @@
           <a href="#"><img src="img/Instagram-2.png" alt="Instagram" /></a>
         </div>
 
-        <p class="footer-copyright">©2020LaslesVPN</p>
+        <p class="footer-copyright" id="id-footer-copyright"></p>
       </div>
 
       <div class="footer-right-content">
         <div class="footer-column">
           <h4>Product</h4>
-          <ul>
-            <li><a href="#">Download</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Server</a></li>
-            <li><a href="#">Countries</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
+          <ul id="id-footer-product"></ul>
         </div>
 
         <div class="footer-column">
           <h4>Engage</h4>
-          <ul>
-            <li><a href="#">LaslesVPN ?</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Tutorials</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
+          <ul id="id-footer-engage"></ul>
         </div>
 
         <div class="footer-column">
           <h4>Earn Money</h4>
-          <ul>
-            <li><a href="#">Affiliate</a></li>
-            <li><a href="#">Become Partner</a></li>
-          </ul>
+          <ul id="id-footer-earn"></ul>
         </div>
       </div>
     </footer>
+
+    <script src="script/fetching.js" defer></script>
   </body>
 </html>

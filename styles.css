@@ -51,7 +51,7 @@ body {
 .navbar-left {
   display: flex;
   align-items: center;
-  justify-content: flex-start ;
+  justify-content: flex-start;
 }
 .navbar-center,
 .navbar-right {
@@ -250,6 +250,8 @@ body {
 }
 
 .title-features {
+  max-width: 497px;
+  width: 100%;
   font-family: "rubik", sans-serif;
   font-size: 33px;
   font-weight: 500;
@@ -274,6 +276,7 @@ body {
 .feature-item {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 .feature-item img {
@@ -349,7 +352,29 @@ body {
   margin-bottom: 20px;
 }
 
-.box-wrapper-plan {
+.box-wrapper-plan-one {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-width: 347px;
+  width: 100%;
+  max-height: 628px;
+  height: 100%;
+}
+
+.box-wrapper-plan-two {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-width: 347px;
+  width: 100%;
+  max-height: 628px;
+  height: 100%;
+}
+
+.box-wrapper-plan-three {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -362,7 +387,6 @@ body {
 
 .box-list-plan-item {
   line-height: 30px;
-  /* padding-left: 8px; */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -392,7 +416,7 @@ body {
 .button {
   max-width: 176px;
   width: 100%;
-  padding: 8px;
+  padding: 8px 50px;
   border-radius: 25px;
   border: 2px solid #f53838;
   background-color: transparent;
@@ -451,8 +475,9 @@ body {
 
 .section-five {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 100vw;
   width: 100%;
   padding: 45px 100px 0 100px;
@@ -467,6 +492,8 @@ body {
 }
 
 .section-five-subtext {
+  max-width: 685px;
+  width: 100%;
   font-size: 16px;
   font-family: "rubik";
   padding: 16px 0 55px;
@@ -485,12 +512,17 @@ body {
 
 .review-box {
   background-color: white;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   padding: 32px 24px;
   max-width: 410px;
   max-height: 247px;
   width: 100%;
   border-radius: 10px;
+  transition:all 0.4s cubic-bezier(1,0,0,1);
+}
+
+.review-box:hover {
+  border: 2px solid #f44336;
 }
 
 .review-box-top {
@@ -666,6 +698,7 @@ body {
   padding: 64px 80px;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   max-width: 1200px;
   max-height: 950px;
   background: none;
@@ -720,7 +753,7 @@ body {
   height: max-content;
   display: flex;
   justify-content: space-between;
-  padding: 60px 80px 0 80px;
+  padding: 60px 80px 60px 80px;
   background-color: #f8f8f8;
   font-family: "Rubik", sans-serif;
   color: #0b132a;
@@ -761,7 +794,7 @@ body {
 .footer-social-wrapper {
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .footer-social-wrapper img {
